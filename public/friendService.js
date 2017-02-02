@@ -3,7 +3,6 @@ angular.module('userProfiles')
 
 
     this.login = function(user) {
-      console.log('friendService login function fired with user: ', user)
       return $http({
          method: 'POST',
          url: 'http://localhost:3000/api/login',
@@ -18,8 +17,7 @@ angular.module('userProfiles')
     };
 
     this.getFriends = function() {
-      console.log('friendService getFriends function fired')
     	return $http.get('http://localhost:3000/api/profiles')
       }
-    
+
 });

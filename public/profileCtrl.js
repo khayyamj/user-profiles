@@ -5,6 +5,5 @@ angular.module('userProfiles')
    .then(function(response){
       $scope.friends = response.data.friends;
       $scope.currentUser = response.data.currentUser;
-      console.log('getFriends response data: ', response.data.currentUser.name);
    })
 });

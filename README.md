@@ -152,7 +152,7 @@ an object back containing our new array and the current user. The response objec
 }
 ```
 
-This function will need an accompanying endpoint in your `server.js`, so add an `app.get` endpoint with a path of `'/api/profiles'.
+This function will need an accompanying endpoint in your `server.js`, so add an `app.get` endpoint with a path of `'/api/profiles'`.
 
 ## Step 3: Serving static files
 

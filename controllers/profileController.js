@@ -21,17 +21,20 @@ var profiles = [
   }
 ];
 
-module.exports = {
-   getFriends: function(req,res,next) {
-               var userFriends = []
-               for (var i = 0; i < req.session.currentUser.friends.length; i++) {
-                  for (var j = 0; j < profiles.length; j++) {
-                     if (req.session.currentUser.friends[i] ===  profiles[j].name) {
-                        userFriends.push(profiles[j])
-                     }
-                  }
-               }
-               res.send({currentUser: req.session.currentUser,
-                        friends: userFriends})
+module.export = {
+   friendsProfiles: function(req,res) {
+      var profiles = [];
+      for (var i = 0; i < req.body.currentUser.friends.length; i++) {
+         for (var i = 0; i < profiles.length; i++) {
+            if (profiles[i].name.toLowerCase() === req.body.currentUser.friends[i].toLowerCase()) {
+               profiles.push(profiles[i])
+            }
+         }
+
+      }
+      res.send({
+         currentUser: req.session.currentUser,
+         friends: profiles
+      })
    }
 }

@@ -26,13 +26,13 @@ var users = [
   }
 ];
 
-module.exports = {
-   login: function(req,res,next) {
+module.export = {
+   login: function(req,res) {
       for (var i = 0; i < users.length; i++) {
          if (users[i].name.toLowerCase() === req.body.name.toLowerCase() &&
             users[i].password === req.body.password) {
-            req.session.currentUser = users[i]
-            res.send({userFound: true})
+            req.session.currentUser = users[i];
+            res.send({userFound: true});
             return;
          }
       }

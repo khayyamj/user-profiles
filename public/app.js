@@ -12,11 +12,6 @@ angular.module('userProfiles', ['ui.router'])
 		url: '/profile',
 		'templateUrl': './views/profile.html',
 		controller: 'profileCtrl'
-	})
-	.state('update',{
-		url: '/update',
-		templateUrl: './views/updateprofile.html',
-		controller: 'updateProfileCtrl'
 	});
 
 	$urlRouterProvider.otherwise('/');

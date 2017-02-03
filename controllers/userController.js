@@ -26,7 +26,7 @@ var users = [
   }
 ];
 
-module.export = {
+module.exports = {
    login: function(req,res) {
       for (var i = 0; i < users.length; i++) {
          if (users[i].name.toLowerCase() === req.body.name.toLowerCase() &&

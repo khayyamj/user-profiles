@@ -21,7 +21,7 @@ var profiles = [
   }
 ];
 
-module.export = {
+module.exports = {
    friendsProfiles: function(req,res) {
       var profiles = [];
       for (var i = 0; i < req.body.currentUser.friends.length; i++) {
